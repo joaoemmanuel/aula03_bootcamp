@@ -169,18 +169,27 @@
 
 ### Exercício 14. Tentativas de Conexão
 # Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
-conectado = ""
-max_tentativas = 5
-tentativas = 0
-while tentativas <= max_tentativas:
-    conectado = str(input("Conexão bem sucedida?"))
-    if conectado.lower().strip() == "sim":
-        print("Servidor Conectado")
-    elif conectado.lower().strip() == "nao":
-        print("Servidor Desconectado. Tentando conectar novamente")
-        tentativas += 1
-    else:
-        print("Entrada inválida!")
+# conectado = ""
+# max_tentativas = 5
+# tentativas = 0
+# while tentativas <= max_tentativas:
+#     conectado = str(input("Conexão bem sucedida?"))
+#     if conectado.lower().strip() == "sim":
+#         print("Servidor Conectado")
+#         break
+#     elif conectado.lower().strip() == "nao":
+#         print("Servidor Desconectado. Tentando conectar novamente")
+#         tentativas += 1
+#     else:
+#         print("Entrada inválida!")
 
 ### Exercício 15. Processamento de Dados com Condição de Parada
 # Processar itens de uma lista até encontrar um valor específico que indica a parada.
+lista = [1, 2, "teste", "parar", 5]
+i = 0
+while i < len(lista):
+    if lista[i] == "parar":
+        print("Valor de parada detectado.")
+        break
+    print(f"Valor processado: {lista[i]}")
+    i += 1
