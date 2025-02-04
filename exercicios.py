@@ -20,22 +20,27 @@
 # Temperatura < 18°C é 'Baixa'
 # Temperatura >= 18°C e <= 26°C é 'Normal'
 # Temperatura > 26°C é 'Alta'
-try:
-    temp = float(input("Informe a temperatura: "))
-    if temp < 18:
-        print(f"A temperatura de {temp}°C é considerada baixa.")
-    elif temp >= 18 and temp <= 26:
-        print(f"A temperatura de {temp}°C é considerada normal.")
-    else:
-        print(f"A temperatura de {temp}°C é considerada alta.")
-except ValueError:
-    print("O valor informado não é válido.")
+# try:
+#     temp = float(input("Informe a temperatura: "))
+#     if temp < 18:
+#         print(f"A temperatura de {temp}°C é considerada baixa.")
+#     elif temp >= 18 and temp <= 26:
+#         print(f"A temperatura de {temp}°C é considerada normal.")
+#     else:
+#         print(f"A temperatura de {temp}°C é considerada alta.")
+# except ValueError:
+#     print("O valor informado não é válido.")
 
 ### Exercício 3: Filtragem de Logs por Severidade
 # Você está analisando logs de uma aplicação e precisa filtrar mensagens 
 # com severidade 'ERROR'. Dado um registro de log em formato de dicionário 
 # como `log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}`, 
 # escreva um programa que imprima a mensagem se a severidade for 'ERROR'.
+log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}
+
+if  log['level'] == "ERROR":
+    print(log['message'])
+
 
 ### Exercício 4: Validação de Dados de Entrada
 # Antes de processar os dados de usuários em um sistema de recomendação, 
