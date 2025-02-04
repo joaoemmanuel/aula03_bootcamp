@@ -151,24 +151,36 @@
 
 ### Exercício 13. Consumo de API Simulado
 # Simular o consumo de uma API paginada, onde cada "página" de dados é processada em loop até que não haja mais páginas.
-pag_atual = 1
-pag_total = 10
+# pag_atual = 1
+# pag_total = 10
 
-while pag_atual <= pag_total:
-    if (pag_total-pag_atual) > 1:
-        print(f"Página {pag_atual} lida! Faltam {pag_total-pag_atual} páginas até o fim do arquivo!")
-        pag_atual += 1
-    elif (pag_total-pag_atual) == 1:
-        print(f"Página {pag_atual} lida! Falta {pag_total-pag_atual} página até o fim do arquivo!")
-        pag_atual += 1
-    else:
-        print(f"Página {pag_atual} lida!")
-        print("Não há mais páginas!")
-        pag_atual += 1
-print("Fim do processamento!")
+# while pag_atual <= pag_total:
+#     if (pag_total-pag_atual) > 1:
+#         print(f"Página {pag_atual} lida! Faltam {pag_total-pag_atual} páginas até o fim do arquivo!")
+#         pag_atual += 1
+#     elif (pag_total-pag_atual) == 1:
+#         print(f"Página {pag_atual} lida! Falta {pag_total-pag_atual} página até o fim do arquivo!")
+#         pag_atual += 1
+#     else:
+#         print(f"Página {pag_atual} lida!")
+#         print("Não há mais páginas!")
+#         pag_atual += 1
+# print("Fim do processamento!")
 
 ### Exercício 14. Tentativas de Conexão
 # Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
+conectado = ""
+max_tentativas = 5
+tentativas = 0
+while tentativas <= max_tentativas:
+    conectado = str(input("Conexão bem sucedida?"))
+    if conectado.lower().strip() == "sim":
+        print("Servidor Conectado")
+    elif conectado.lower().strip() == "nao":
+        print("Servidor Desconectado. Tentando conectar novamente")
+        tentativas += 1
+    else:
+        print("Entrada inválida!")
 
 ### Exercício 15. Processamento de Dados com Condição de Parada
 # Processar itens de uma lista até encontrar um valor específico que indica a parada.
