@@ -143,14 +143,29 @@
 
 ### Exercício 12. Validação de Entrada
 # Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
-num = int(input("Digite um número de 1 a 10: "))
-while num < 1 or num > 10:
-    print("Número fora do intervalo da instrução!")
-    num = int(input("Digite um número de 1 a 10: "))
-print("Número válido!")
+# num = int(input("Digite um número de 1 a 10: "))
+# while num < 1 or num > 10:
+#     print("Número fora do intervalo da instrução!")
+#     num = int(input("Digite um número de 1 a 10: "))
+# print("Número válido!")
 
 ### Exercício 13. Consumo de API Simulado
 # Simular o consumo de uma API paginada, onde cada "página" de dados é processada em loop até que não haja mais páginas.
+pag_atual = 1
+pag_total = 10
+
+while pag_atual <= pag_total:
+    if (pag_total-pag_atual) > 1:
+        print(f"Página {pag_atual} lida! Faltam {pag_total-pag_atual} páginas até o fim do arquivo!")
+        pag_atual += 1
+    elif (pag_total-pag_atual) == 1:
+        print(f"Página {pag_atual} lida! Falta {pag_total-pag_atual} página até o fim do arquivo!")
+        pag_atual += 1
+    else:
+        print(f"Página {pag_atual} lida!")
+        print("Não há mais páginas!")
+        pag_atual += 1
+print("Fim do processamento!")
 
 ### Exercício 14. Tentativas de Conexão
 # Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
